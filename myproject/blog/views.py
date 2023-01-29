@@ -6,10 +6,4 @@ from django.http import JsonResponse as JR
 
 
 def home(request):
-    return HR('Hello, this is home view')
-
-
-def api(request):
-    return JR({
-        "title" : "welcome to json"
-    })
+    return render(request,'blog/home.html')
