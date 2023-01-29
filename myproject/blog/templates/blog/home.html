@@ -1,9 +1,8 @@
 this is html file in BLOG
 
-<p>
-     hello
-     {{username}},
-     {{age}},
-     {{job}}
-
-</p>
+{% for animal in animals %}
+     <article>
+          <img src="{{animal.img}}">
+          <p>{{animal.name}}</p>
+     </article>
+{% endfor %}
