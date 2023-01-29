@@ -1,8 +1,12 @@
-this is html file in BLOG
-
-{% for animal in animals %}
+<center>
+{% for article in articles %}
      <article>
-          <img src="{{animal.img}}">
-          <p>{{animal.name}}</p>
+          <h1>{{article.title}}</h1>
+          <img src="{{article.thumbnail.url}}" width ='500' height="400">
+          <p>
+               {{article.description}}
+          </p>
+          
      </article>
 {% endfor %}
+</center>
