@@ -6,4 +6,9 @@ from django.http import JsonResponse as JR
 
 
 def home(request):
-    return render(request,'blog/home.html')
+    context = {
+        'username':'amin',
+        'age':23,
+        'job':'programer'
+    }
+    return render(request,'blog/home.html',context)
