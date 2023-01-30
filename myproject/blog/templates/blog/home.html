@@ -34,7 +34,7 @@
 
                     {{article.jpublish}}
                 <div>
-                    {% for cat in article.category.all %}
+                    {% for cat in article.category_published.all %}
                     <a href="{% url 'blog:category' cat.slug %}">#{{cat.title}}</a>
                     {% endfor %}
 
