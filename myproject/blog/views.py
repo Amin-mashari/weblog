@@ -1,3 +1,4 @@
+from django.core.paginator import Paginator
 from django.shortcuts import render,get_object_or_404
 # from django.http import HttpResponse as HR
 # from django.http import JsonResponse as JR
@@ -6,9 +7,13 @@ from .models import Article , Category
 # Create your views here.
 
 
-def home(request):
+def home(request,page=1):
+
+    article_list = Article.objects.published()
+    paginator = Paginator(article_list , 1)
+    articles = paginator.get_page(page)
     context = {
-        'articles': Article.objects.filter(status='p'),
+        'articles': articles,
     }
     return render(request, 'blog/home.html', context)
 
