@@ -1,6 +1,13 @@
 from django.db import models
 from django.utils import timezone
 from extensions.utils import jalali_convertor
+
+#managers
+class ArticleManager(models.Manager):
+    def published(self):
+        return self.filter(status='p')
+
+
 # Create your models here.
 class Category(models.Model):
     title = models.CharField(max_length=200,verbose_name ='عنوان دسته بندی')
@@ -31,7 +38,8 @@ class Article(models.Model):
         ('p', 'منتشر شده'),
     )
     status = models.CharField(max_length=1, choices=STATUS_CHOICES,verbose_name ='وضعیت')
-
+    #define manager for filter in Articles
+    objects = ArticleManager()
     class Meta:
         verbose_name = 'مقاله'
         verbose_name_plural = 'مقالات'
