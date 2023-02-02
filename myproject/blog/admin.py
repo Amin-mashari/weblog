@@ -1,5 +1,6 @@
 from django.contrib import admin
 from .models import Article,Category
+
 #actions
 def make_published(modeladmin, request, queryset):
      row_updated = queryset.update(status='p')
@@ -35,8 +36,8 @@ admin.site.register(Category,CategoryAdmin)
 
 
 class ArticleAdmin(admin.ModelAdmin):
-     list_display = ('title','slug','thumbnail_tag','jpublish','status','category_to_str')
-     list_filter = ('publish','status')
+     list_display = ('title','thumbnail_tag','slug','author','jpublish','status','category_to_str')
+     list_filter = ('publish','status','author')
      search_fields = ('title','description')
      prepopulated_fields = {'slug':('title',)}
      ordering = ['-status','-publish']
@@ -44,7 +45,7 @@ class ArticleAdmin(admin.ModelAdmin):
 
 
      def category_to_str(self,obj):
-          return ", ".join([category.title for category in obj.category_published() ])
+          return ", ".join([category.title for category in obj.category.active() ])
           
      category_to_str.short_description = 'دسته‌بندی'    
      

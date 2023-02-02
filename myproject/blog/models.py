@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 from django.utils.html import format_html
 from django.utils import timezone
 from extensions.utils import jalali_convertor
@@ -48,6 +49,7 @@ class Article(models.Model):
     )
     status = models.CharField(max_length=1, choices=STATUS_CHOICES,verbose_name ='وضعیت')
     #define manager for filter in Articles
+    author = models.ForeignKey(User,null=True, on_delete=models.SET_NULL, related_name='articles', verbose_name='نویسنده')
     objects = ArticleManager()
     class Meta:
         verbose_name = 'مقاله'
@@ -62,8 +64,8 @@ class Article(models.Model):
 
     jpublish.short_description = 'زمان انتشار'
 
-    def category_published(self):
-        return self.category.filter(status=True)
+    # def category_published(self):
+    #     return self.category.filter(status=True)
 
     def thumbnail_tag(self):
         return format_html("<img width=100px height=70px style='border-radius= 5px' src={}>".format(self.thumbnail.url))
