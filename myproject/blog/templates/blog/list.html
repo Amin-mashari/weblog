@@ -33,7 +33,7 @@
                 </a>
                 <p class="post-meta">
                     Posted by
-                    <a href="#!">Amino</a>
+                    <a href="{% url 'blog:author' article.author %}">{{article.author.get_full_name}}</a>
 
                     {{article.jpublish}}
                 <div>
