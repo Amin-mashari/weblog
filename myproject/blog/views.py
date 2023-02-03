@@ -22,10 +22,10 @@ from .models import Article , Category
 
 class ArticleList(ListView):
     # model = Article
-    # template_name = 'blog/home.html'
+    template_name = 'blog/article_list.html'
 
     queryset = Article.objects.published()
-    paginate_by = 1
+    paginate_by = 2
 
 
 
