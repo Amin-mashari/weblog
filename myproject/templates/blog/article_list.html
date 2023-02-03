@@ -3,3 +3,11 @@
 {% block header %}
 <!--header block in article list-->
 {% endblock %}
+
+{% block previous_page_url %}
+  {% url 'blog:home' page_obj.previous_page_number %}
+{% endblock %}
+
+{% block next_page_url %}
+  {% url 'blog:home' page_obj.next_page_number %}
+{% endblock %}

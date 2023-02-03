@@ -49,16 +49,16 @@
             <!--pager-->>
             <div class="d-flex justify-content-end mb-4">
                 {% if is_paginated %}
-                <div class="d-flex justify-content-end mb-4">
-                    {% if page_obj.has_previous %}
-                    <a class="btn btn-primary text-uppercase" href="{% block previous_page_url %}{% endblock %}">→ پست های قدیمی </a>
-                    {% endif %}
-                    
-                    {% if page_obj.has_next %}
-                        <a class="btn btn-primary text-uppercase" href="{% block next_page_url %}{% endblock %}">پست های جدید → </a>
-                    {% endif %}
+                <div class="clearfix pager-botton">
+                  {% if page_obj.has_previous %}
+                    <a class="btn btn-primary float-right ml-3" href="{% block previous_page_url %}{% endblock %}">پست های جدید &rarr;</a>
+                  {% endif %}
+                  {% if page_obj.has_next %}
+                    <a class="btn btn-primary float-right" href="{% block next_page_url %}{% endblock %}">پست های قدیمی &larr;</a>
+                  {% endif %}
                 </div>
-            {% endif %}
+                {% endif %}
+      
         </div>
     </div>
 </div>
