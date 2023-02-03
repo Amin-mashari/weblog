@@ -129,3 +129,7 @@ MEDIA_ROOT =  BASE_DIR / 'media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #collectstatic for create file static like css and html
+
+# login directory
+LOGIN_REDIRECT_URL = 'account:home'
+LOGIN_URL = 'account:login' 
