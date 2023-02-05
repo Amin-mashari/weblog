@@ -5,9 +5,6 @@ from django.views.generic import ListView
 from blog.views import Article
 
 # Create your views here.
-@login_required #this mean function home required login to showup
-def home(request):
-     return render(request,'registration/home.html')
 
 class ArticleList(LoginRequiredMixin,ListView):
      queryset = Article.objects.all()
