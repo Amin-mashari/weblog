@@ -25,7 +25,7 @@
                <tbody>
                     {% for article in object_list %}
                          <tr>
-                              <td>{{article.title}}</td>
+                              <td><a href="{% url 'account:article-update' article.pk %}">{{article.title}}</a></td>
                               <td><img src="{{article.thumbnail.url}}" width="120"></td>
                               <td>{{article.category_to_str}}</td>
                               <td>{{article.author.get_full_name}}</td>

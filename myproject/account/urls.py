@@ -4,7 +4,7 @@
 # elsewhere.
 from django.contrib.auth import views
 from django.urls import path
-from .views import ArticleList,ArticleCreate
+from .views import ArticleList, ArticleCreate, ArticleUpdate
 
 app_name = 'account'
 
@@ -30,5 +30,6 @@ urlpatterns = [
  
 urlpatterns +=[
      path('',ArticleList.as_view(), name='home'),
-     path('article/create',ArticleCreate.as_view(), name='article-create')
+     path('article/create',ArticleCreate.as_view(), name='article-create'),
+     path('article/update/<int:pk>',ArticleUpdate.as_view(), name='article-update'),
 ]
