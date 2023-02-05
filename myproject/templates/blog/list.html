@@ -36,17 +36,17 @@
                     <a href="{% url 'blog:author' article.author %}">{{article.author.get_full_name}}</a>
 
                     {{article.jpublish}}
-                <div>
-                    {% for cat in article.category.active %}
-                    <a href="{% url 'blog:category' cat.slug %}">#{{cat.title}}</a>
-                    {% endfor %}
+                    <div>
+                        {% for cat in article.category.active %}
+                        <a href="{% url 'blog:category' cat.slug %}">#{{cat.title}}</a>
+                        {% endfor %}
 
-                </div>
+                    </div>
                 </p>
             </div>
             {% endfor %}
 
-            <!--pager-->>
+            <!--pager-->
             <div class="d-flex justify-content-end mb-4">
                 {% if is_paginated %}
                 <div class="clearfix pager-botton">
