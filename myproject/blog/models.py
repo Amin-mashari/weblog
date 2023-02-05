@@ -1,6 +1,6 @@
 from django.db import models
 from django.urls import reverse
-from django.contrib.auth.models import User
+from account.models import User
 from django.utils.html import format_html
 from django.utils import timezone
 from extensions.utils import jalali_convertor

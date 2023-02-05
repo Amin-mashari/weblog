@@ -145,3 +145,4 @@ LOGIN_URL = 'account:login'
 
 # crispy bootstrap version to use
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+AUTH_USER_MODEL = 'account.User'
