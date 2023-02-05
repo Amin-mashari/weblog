@@ -29,12 +29,14 @@
                               {{ form.thumbnail|as_crispy_field}}
                               {{ form.publish|as_crispy_field}}
                          </div>
-                         <div class="col-6"><!--col-6 is for separate and break page-->
-                              {{ form.author|as_crispy_field}}
-                         </div>
-                         <div class="col-6"><!--col-6 is for separate and break page-->
-                              {{ form.status|as_crispy_field}}
-                         </div>
+                         {% if user.is_superuser %}
+                              <div class="col-6"><!--col-6 is for separate and break page-->
+                                   {{ form.author|as_crispy_field}}
+                              </div>
+                              <div class="col-6"><!--col-6 is for separate and break page-->
+                                   {{ form.status|as_crispy_field}}
+                              </div>
+                         {% endif %}
                     </div>
           
                     <button class="btn btn-success"> ارسال مقاله</button>
