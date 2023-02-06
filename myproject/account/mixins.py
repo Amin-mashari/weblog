@@ -4,18 +4,12 @@ from blog.models import Article
 
 class FieldsMixin():
      def dispatch(self, request, *args, **kwargs):
-          if request.user.is_superuser:
-               self.fields = [
-               "author","title", "slug", "category", 
-               "description", "thumbnail", "publish","is_special" ,"status"
-               ]
-          elif request.user.is_author:
-               self.fields = [
+          self.fields = [
                "title", "slug", "category", 
-               "description", "thumbnail", "publish" , "is_special"
-               ]
-          else:
-               raise Http404("you cant see this page")
+               "description", "thumbnail", "publish","is_special" ,"status"
+          ]
+          if request.user.is_superuser:
+               self.fields.append("author")
           return super().dispatch(request, *args, **kwargs)
 
 class FormValidMixin():
@@ -25,7 +19,8 @@ class FormValidMixin():
           else:
                self.obj = form.save(commit=False)
                self.obj.author = self.request.user
-               self.obj.status = 'd'
+               if not self.obj.status == 'i':
+                    self.obj.status = 'd'
 
           return super().form_valid(form)
 
@@ -39,10 +34,13 @@ class AuthorAccessMixin():
                raise Http404("you cant see this page")
 class AuthorsAccessMixin():
      def dispatch(self, request, *args, **kwargs):
-          if request.user.is_superuser or request.user.is_author:
-               return super().dispatch(request, *args, **kwargs)
-          else:
-               return redirect("account:profile")
+          if request.user.is_authenticated:
+               if request.user.is_superuser or request.user.is_author:
+                    return super().dispatch(request, *args, **kwargs)
+               else:
+                    return redirect("account:profile") 
+          return redirect("account:login")
+               
 
 
 class SuperUserAccessMixin():
