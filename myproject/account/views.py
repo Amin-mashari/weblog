@@ -19,7 +19,7 @@ from .mixins import (
 
 from .models import User
 from .forms import ProfileForm
-from django.contrib.auth.views import LoginView
+from django.contrib.auth.views import LoginView, PasswordChangeView
 
 # Create your views here.
 
@@ -72,4 +72,8 @@ class Login(LoginView):
                return reverse_lazy("account:home")
 
           return reverse_lazy("account:profile")
+          
+
+class PasswordChange(PasswordChangeView):
+     success_url = reverse_lazy("account:password_change_done")
           
