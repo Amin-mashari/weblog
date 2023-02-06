@@ -45,7 +45,7 @@ class Article(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     STATUS_CHOICES = (
-        ('d', 'پیش‌نیوس'),#draft
+        ('d', 'پیش‌نویس'),#draft
         ('p', 'منتشر شده'),#publish
         ('i', 'در حال بررسی'),#investigation
         ('b', 'برگشت داده شده'), #back
