@@ -32,6 +32,7 @@
                          {% if user.is_superuser %}
                               <div class="col-6"><!--col-6 is for separate and break page-->
                                    {{ form.author|as_crispy_field}}
+                                   {{ form.is_special|as_crispy_field}}
                               </div>
                               <div class="col-6"><!--col-6 is for separate and break page-->
                                    {{ form.status|as_crispy_field}}

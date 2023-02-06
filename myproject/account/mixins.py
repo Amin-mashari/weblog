@@ -3,18 +3,16 @@ from django.shortcuts import get_object_or_404
 from blog.models import Article
 
 class FieldsMixin():
-     """Verify that the current user is authenticated."""
-
      def dispatch(self, request, *args, **kwargs):
           if request.user.is_superuser:
                self.fields = [
                "author","title", "slug", "category", 
-               "description", "thumbnail", "publish", "status"
+               "description", "thumbnail", "publish","is_special" ,"status"
                ]
           elif request.user.is_author:
                self.fields = [
                "title", "slug", "category", 
-               "description", "thumbnail", "publish"
+               "description", "thumbnail", "publish" , "is_special"
                ]
           else:
                raise Http404("you cant see this page")

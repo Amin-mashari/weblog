@@ -53,6 +53,8 @@ class Article(models.Model):
     status = models.CharField(max_length=1, choices=STATUS_CHOICES,verbose_name ='وضعیت')
     #define manager for filter in Articles
     author = models.ForeignKey(User,null=True, on_delete=models.SET_NULL, related_name='articles', verbose_name='نویسنده')
+    is_special = models.BooleanField(default=False, verbose_name ='مقاله ویژه')
+    
     objects = ArticleManager()
     class Meta:
         verbose_name = 'مقاله'
