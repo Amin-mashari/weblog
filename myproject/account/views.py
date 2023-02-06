@@ -45,7 +45,7 @@ class ArticleDelete(SuperUserAccessMixin, DeleteView):
      success_url = reverse_lazy('account:home')
      template_name ='registration/article-confirm-delete.html'
 
-class Profile( UpdateView):
+class Profile(LoginRequiredMixin, UpdateView):
      model = User
      template_name = 'registration/profile.html'
      form_class = ProfileForm
