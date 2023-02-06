@@ -46,15 +46,23 @@
                                              </a>
 
                                         {% else %}
-                                             <span class="badge badge-danger">پیش‌نویس</span>    
+                                             <span class="badge badge-info">پیش‌نویس</span>    
+                                             <!-- preview -->
+                                             <a target="_blank" class="badge badge-secondary" href="{% url 'blog:preview' article.pk %}">
+                                                  پیش‌نمایش مقاله
+                                             </a>
+                                             <!-- /preview -->
                                         {% endif %}
 
+                                        <!-- delete -->
+                                        
                                         {% if user.is_superuser %}
                                         <a class="badge badge-danger" href="{% url 'account:article-delete' article.pk %}"
                                         >
                                              حذف مقاله
                                         </a>
                                         {% endif %}
+                                        <!-- /delete -->
                                    </td>
                               </tr> 
                          {% endfor %}

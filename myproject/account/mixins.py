@@ -32,7 +32,7 @@ class FormValidMixin():
           return super().form_valid(form)
 
 class AuthorAccessMixin():
-     """Verify that the current user is authenticated."""
+
      def dispatch(self, request, pk, *args, **kwargs):
           article = get_object_or_404(Article ,pk=pk)
           if article.author == request.user and article.status == 'd' \
@@ -42,7 +42,6 @@ class AuthorAccessMixin():
                raise Http404("you cant see this page")
 
 class SuperUserAccessMixin():
-     """Verify that the current user is authenticated."""
      def dispatch(self, request, *args, **kwargs):
           if request.user.is_superuser:
                return super().dispatch(request, *args, **kwargs)
