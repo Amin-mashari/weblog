@@ -45,8 +45,10 @@ class Article(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     STATUS_CHOICES = (
-        ('d', 'پیش‌نیوس'),
-        ('p', 'منتشر شده'),
+        ('d', 'پیش‌نیوس'),#draft
+        ('p', 'منتشر شده'),#publish
+        ('i', 'در حال بررسی'),#investigation
+        ('b', 'برگشت داده شده'), #back
     )
     status = models.CharField(max_length=1, choices=STATUS_CHOICES,verbose_name ='وضعیت')
     #define manager for filter in Articles
