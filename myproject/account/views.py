@@ -18,6 +18,7 @@ from .mixins import (
 
 from .models import User
 from .forms import ProfileForm
+from django.contrib.auth.views import LoginView
 
 # Create your views here.
 
@@ -61,3 +62,13 @@ class Profile(LoginRequiredMixin, UpdateView):
           })
 
           return kwargs
+
+class Login(LoginView):
+     def get_success_url(self):
+          user = self.request.user
+          
+          if user.is_superuser or user.is_author:
+               return reverse_lazy("account:home")
+
+          return reverse_lazy("account:profile")
+          
