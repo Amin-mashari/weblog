@@ -148,3 +148,5 @@ LOGIN_URL = 'login'
 # crispy bootstrap version to use
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 AUTH_USER_MODEL = 'account.User'
+# for validation password email 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
