@@ -10,6 +10,14 @@
 
 سایت اصلی [جنگو](https://docs.djangoproject.com/en/4.1/)
 
+# اجرای پروژه
+```
+pip install -r requirements.txt
+
+manage.py runserver
+```
+
+
 # تصاویری از سایت
 
      
