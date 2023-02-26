@@ -10,16 +10,25 @@
 
 سایت اصلی [جنگو](https://docs.djangoproject.com/en/4.1/)
 
-# تصاویری از سایت 
+# تصاویری از سایت
 
-<p float="left" align="middle" >
      
-<img src="https://drive.google.com/uc?id=1iexk2gwP6yeAEpj1GPHsteGhC63bvVoz"
-     style="width:50%;" />  <img src="https://drive.google.com/uc?id=1U2cfGPJNnZ-EVBvPx1rcA7Chfawjigjr"
-     style="width:45%;"/>
+<img src="https://drive.google.com/uc?id=1iexk2gwP6yeAEpj1GPHsteGhC63bvVoz" style="width:48%;" />  <img src="https://drive.google.com/uc?id=1U2cfGPJNnZ-EVBvPx1rcA7Chfawjigjr" style="width:48%;"/>
      
      
 <img src="https://drive.google.com/uc?id=1cCpWrJCu2ac87Ca-O6_Lw7aceEnjkL5l"
-     style="width:100%;"/>
+     style="width:48%;"/> <img src="https://drive.google.com/uc?id=1h1mz5nFg_COPCYGaXGBuZaaLdxmbXNoS"
+     style="width:48%;"/>
      
-</p>
+<img src="https://drive.google.com/uc?id=101UWI-XYvUVoBia8J65Q8lXj02I7NHyO"
+     style="width:48%;"/> <img src="https://drive.google.com/uc?id=1PDRx4XDDj7UGjgdV14CW6m3Y6jr2deDj"
+     style="width:48%;"/>
+
+<img src="https://drive.google.com/uc?id=14rBHfz7B_nncKKNh09Mf-Z6dPnOe4qM8"
+     style="width:48%;"/> <img src="https://drive.google.com/uc?id=1LUPORmyaq_LI2GoR06c8ewHQYkNvdPlx"
+     style="width:48%;"/>
+
+<img src="https://drive.google.com/uc?id=1bQJr6IJ42PFCmKiCaKt_rpzz2OwxlyeI"
+     style="width:48%;"/> <img src="https://drive.google.com/uc?id=1ntGwxdwXiJHP0z9534f3xZBxHJ2OlnMf"
+     style="width:48%;"/>
+     
