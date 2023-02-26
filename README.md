@@ -12,8 +12,14 @@
 
 # تصاویری از سایت 
 
-
+<p float="left" align="middle" >
+     
 <img src="https://drive.google.com/uc?id=1iexk2gwP6yeAEpj1GPHsteGhC63bvVoz"
-     alt="sample image"
-     style="display: block; margin-right: auto; margin-left: auto; width: 90%;
-     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)" />
+     style="width:50%;" />  <img src="https://drive.google.com/uc?id=1U2cfGPJNnZ-EVBvPx1rcA7Chfawjigjr"
+     style="width:45%;"/>
+     
+     
+<img src="https://drive.google.com/uc?id=1cCpWrJCu2ac87Ca-O6_Lw7aceEnjkL5l"
+     style="width:100%;"/>
+     
+</p>
