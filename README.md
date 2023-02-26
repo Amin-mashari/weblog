@@ -14,8 +14,10 @@
 ```
 pip install -r requirements.txt
 
-manage.py runserver
+myproject/manage.py runserver
 ```
+
+حال با رفتن به آدرس `localhost:8000` سایت را مشاهده خواهید کرد.
 
 
 # تصاویری از سایت
