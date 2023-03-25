@@ -1,7 +1,4 @@
-# django-toutorial
 
-# course link
-https://gitlab.com/mtarif/django-course-source 
 
 # RUN
 
@@ -25,3 +22,8 @@ python3 ./manage.py runserver
 ```
 
 now porject is up on localhost:8000
+
+
+
+# source 
+https://gitlab.com/mtarif/django-course-source 
