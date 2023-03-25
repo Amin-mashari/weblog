@@ -1,0 +1,8 @@
+version: '3'
+services:
+  weblog:
+    build: ../
+    image: weblog:1.0
+    container_name: wildfly_server
+    ports:
+      - "8081:8000"
