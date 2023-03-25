@@ -20,7 +20,7 @@ now porject is up on localhost:8081
 ```
 cd myproject
 pip install -r requirements.txt
-python3 runserver ./manage.py 
+python3 ./manage.py runserver
 
 ```
 
