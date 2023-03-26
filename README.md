@@ -13,12 +13,24 @@ docker-compose up -d
 now porject is up on localhost:8081
 
 ## run on server
-
+1- go to project
 ```
 cd myproject
-pip install -r requirements.txt
-python3 ./manage.py runserver
+```
 
+2- setUP venv
+```
+virtualenv venv
+source venv/bin/activate
+```
+3- install dependencies
+
+```
+pip install -r requirements.txt
+```
+4- run project
+```
+python3 ./manage.py runserver
 ```
 
 now porject is up on localhost:8000
