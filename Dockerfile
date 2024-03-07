@@ -1,8 +1,14 @@
 FROM python:3.8-slim-buster
 
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
 WORKDIR /app
 
-COPY . .
+# Install dependencies
+COPY requirements.txt /app/
 RUN pip install -r requirements.txt
 
-CMD ["python3","manage.py","runserver" ,"0.0.0.0:8000"]
+# Copy the project code into the container
+COPY . /app/
